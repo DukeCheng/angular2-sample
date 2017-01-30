@@ -15,6 +15,9 @@ module.exports = {
     },
 
     module: {
+        //https://github.com/AngularClass/angular2-webpack-starter/issues/993
+        // for fix issue:"for fix Critical dependency: the request of a dependency is an expression"
+        exprContextCritical: false,
         loaders: [{
                 test: /\.ts$/,
                 use: ['ts-loader', 'tslint-loader']
