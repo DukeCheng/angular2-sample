@@ -41,8 +41,8 @@ module.exports = {
                 loader: 'raw-loader'
             },
             {
-                test: /\.json$/,
-                loader: 'json-loader'
+                test: /\.json($|\?)/,
+                use: 'json-loader'
             }
         ]
     },

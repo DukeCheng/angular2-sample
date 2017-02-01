@@ -8,6 +8,7 @@ module.exports = {
     },
 
     module: {
+        exprContextCritical: false,
         loaders: [{
                 test: /\.ts$/,
                 use: ['ts-loader', 'tslint-loader']
@@ -30,6 +31,10 @@ module.exports = {
                 test: /\.css$/,
                 include: helpers.root('src', 'app'),
                 loader: 'raw-loader'
+            },
+            {
+                test: /\.json($|\?)/,
+                use: 'json-loader'
             }
         ]
     }
